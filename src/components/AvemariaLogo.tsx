@@ -1,4 +1,5 @@
 import logoAsset from "@/assets/avemaria-logo.png.asset.json";
+import LogoImage from "/logo.png";
 
 /**
  * AvemariaLogo — renders the company logo with optional company name text.
@@ -21,16 +22,15 @@ export function AvemariaLogo({
   return (
     <div className="flex items-center gap-3 shrink-0">
       <img
-        src={logoAsset.url}
+        src={LogoImage}
         alt="Avemaria Computer Solution"
         className={`${imgClassName} object-contain drop-shadow-sm`}
         loading="eager"
       />
       {showName && (
         <span
-          className={`font-display font-bold text-base md:text-lg tracking-tight leading-tight whitespace-nowrap ${
-            nameVariant === "light" ? "text-white" : "text-brand-dark"
-          }`}
+          className={`font-display font-bold text-base md:text-lg tracking-tight leading-tight whitespace-nowrap ${nameVariant === "light" ? "text-white" : "text-brand-dark"
+            }`}
         >
           Avemaria Computer Solution
         </span>
